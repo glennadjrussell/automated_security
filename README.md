@@ -5,6 +5,8 @@
 ```
 sudo apt-get install imagemagick libmagickwand-dev # (optional) ubuntu
 bundle install --binstubs --path vendor
+cd presentation && bundle exec showoff serve
+ # open http://localhost:9090
 ```
 
 If you don't want the WarGames!
@@ -12,6 +14,8 @@ If you don't want the WarGames!
 ```
 sudo apt-get install imagemagick libmagickwand-dev # (optional) ubuntu
 bundle install --binstubs --path vendor --without wargames
+cd presentation && bundle exec showoff serve
+ # open http://localhost:9090
 ```
 
 ## Or just look at the markdown
