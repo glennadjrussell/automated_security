@@ -1,0 +1,9 @@
+.slide {
+  background-image:url("logo.png");
+  background-repeat:no-repeat;
+}
+
+.content {
+  color: black;
+  font-family: helvetica, arial; 
+}
