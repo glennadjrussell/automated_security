@@ -1,10 +1,9 @@
+Gemfile.lock
+.bundle
 .chef
 .vagrant
-.zero-knife.rb
-vendor/*
 bin/*
-extra_disks/*
 installers/*
-chef/cookbooks/*.tar.gz
+vendor/*
 **/viewstats.json
 
