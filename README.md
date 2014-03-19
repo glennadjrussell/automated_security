@@ -27,7 +27,7 @@ but the links don't work
 
 ## Setup Vagrant
 
- * [vagrant](http://www.vagrantup.com/downloads.html)
+[http://www.vagrantup.com/downloads.html](http://www.vagrantup.com/downloads.html)
 
 ## Install gems
 
