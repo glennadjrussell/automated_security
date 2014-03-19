@@ -28,8 +28,6 @@ but the links don't work
 ## Setup Vagrant
 
  * [vagrant](http://www.vagrantup.com/downloads.html)
- * ```vagrant plugin install vagrant-berkshelf```
-   * note: currently requires vagrant < 1.5
 
 ## Install gems
 
