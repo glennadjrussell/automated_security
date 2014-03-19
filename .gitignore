@@ -1,0 +1,10 @@
+.chef
+.vagrant
+.zero-knife.rb
+vendor/*
+bin/*
+extra_disks/*
+installers/*
+chef/cookbooks/*.tar.gz
+**/viewstats.json
+
