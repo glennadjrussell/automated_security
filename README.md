@@ -4,14 +4,14 @@
 
 ```
 sudo apt-get install imagemagick libmagickwand-dev # (optional) ubuntu
-bundle install --binstubs
+bundle install --binstubs --path vendor
 ```
 
 If you don't want the WarGames!
 
 ```
 sudo apt-get install imagemagick libmagickwand-dev # (optional) ubuntu
-bundle install --binstubs --without wargames
+bundle install --binstubs --path vendor --without wargames
 ```
 
 ## Or just look at the markdown
@@ -25,13 +25,13 @@ http://www.vagrantup.com/downloads.html
 ## Install gems
 
 ```
-bundle install --binstubs
+bundle install --binstubs --path vendor
 ```
 
 If you don't want to run the presentation in the future
 
 ```
-bundle install --binstubs --without presentation
+bundle install --binstubs --path vendor --without presentation
 ```
 
 ## Build the players
