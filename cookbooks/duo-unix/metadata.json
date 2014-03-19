@@ -1,0 +1,32 @@
+{
+  "name": "duo-unix",
+  "description": "Configures Duo 2-factor auth for unix",
+  "long_description": "duo-unix Cookbook\n============\nThis cookbook installs [Duo](https://www.duosecurity.com/) 2-factor\nauthentication and configures ssh to use it.\n\nRequirements\n------------\n\nThis cookbook should work on either Debian/Ubuntu or Redhat families\nof Linux distros.\n\nAttributes\n----------\n\nTODO\n\nUsage\n-----\n#### duo-unix\n\nInclude `duo-unix` in your node's `run_list`:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[duo-unix]\"\n  ]\n}\n```\n\nSetup chef-vault with something like:\n\n```\nbin/knife vault create duo config '{\"ikey\":\"FOO\",\"skey\":\"BAR\",\"host\":\"api-BAZ.duosecurity.com\"}' --search \"role:attacker\" --admin my_key\n```\n\nIf you really don't want to use chef-vault\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[duo-unix]\"\n  ],\n  \"default_attributes\": {\n    \"duo-unix\":{\n      \"service\":{\n        \"ikey\":\"some_key\",\n        \"skey\":\"some_secret_key\",\n        \"host\":\"api-something.duosecurity.com\"\n      },\n      \"conf\":{\n        \"group\":\"users\"\n      }\n    }\n  }\n}\n```\n\nContributing\n------------\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write your change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nLicense and Authors\n-------------------\nAuthors: Jason Rohwedder <jro@risk.io>\n",
+  "maintainer": "Risk I/O",
+  "maintainer_email": "jro@risk.io",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "chef-vault": ">= 0.0.0",
+    "build-essential": ">= 0.0.0",
+    "openssh": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}
