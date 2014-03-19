@@ -1,0 +1,15 @@
+{
+  "name": "base",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "base role",
+  "run_list": [
+    "recipe[build-essential]",
+    "recipe[chef-client]"
+  ],
+  "default_attributes": {
+    "chef_client":{
+      "init_style":"none"
+    }
+  }
+}

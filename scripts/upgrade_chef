@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -f /chef_upgraded ]; then
+  apt-get update && \
+  apt-get install build-essential ruby1.9.1-dev --no-upgrade --yes && \
+  gem install chef --version 11.10.4 --no-rdoc --no-ri --conservative && \
+  touch /chef_upgraded
+fi
+

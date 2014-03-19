@@ -1,0 +1,23 @@
+{
+  "name": "defender",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "defender role",
+  "run_list": [
+    "role[base]",
+    "recipe[duo-unix]",
+    "recipe[automated::defender]"
+  ],
+  "default_attributes": {
+    "duo-unix":{
+      "api":{
+        "ikey":"MY_DUO_IKEY",
+        "skey":"MY_DUO_SKEY",
+        "host":"MY_DUO_API_HOST"
+      },
+      "conf":{
+        "group":"users"
+      }
+    }
+  }
+}
