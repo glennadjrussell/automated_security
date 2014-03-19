@@ -18,7 +18,7 @@ cd presentation && bundle exec showoff serve
  # open http://localhost:9090
 ```
 
-## Or just look at the [pdf](https://github.com/jro/automated_security/blob/master/presentation.pdf)
+## Or just look at the [pdf](https://github.com/jro/automated_security/blob/master/presentation.pdf?raw=true)
 but the links don't work
 
 ## Or just look at the [markdown](https://github.com/jro/automated_security/blob/master/presentation/one/01_slide.md)
