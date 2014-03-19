@@ -27,7 +27,9 @@ but the links don't work
 
 ## Setup Vagrant
 
-http://www.vagrantup.com/downloads.html
+ * [vagrant](http://www.vagrantup.com/downloads.html)
+ * ```vagrant plugin install vagrant-berkshelf```
+   * note: currently requires vagrant < 1.5
 
 ## Install gems
 
@@ -41,16 +43,37 @@ If you don't want to run the presentation in the future
 bundle install --binstubs --path vendor --without presentation
 ```
 
+## Configure
+
+ * edit roles/defender.json and put in your
+  [duosec](https://www.duosecurity.com/) credentials
+ * look at cookbooks/automated/recipes and see if there's anything
+   you'd like to poke at
+
 ## Build the players
 
 ```
 vagrant box add base http://files.vagrantup.com/precise64.box
-vagrant up
+vagrant up defender
+vagrant up attacker
 ```
 
-## FIXME there's more still!
+## Play
 
-bin/knife environment create automated
-bin/knife role from file chef/roles/*.json
-bin/berks upload
+You can reprovision the players
+```
+vagrant provision defender #(or attacker)
+```
 
+Try out 2-factor ssh
+```
+vagrant ssh defender -- -l defender
+```
+Neat!
+
+Check out your attacker to see if it did an nmap scan
+```
+vagrant ssh attacker
+...
+ls /tmp # and look for an xml file
+```
